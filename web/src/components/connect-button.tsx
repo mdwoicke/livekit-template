@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { Button } from "@/components/ui/button";
 import { useConnection } from "@/hooks/use-connection";
 import { Loader2, Mic } from "lucide-react";
 import { usePlaygroundState } from "@/hooks/use-playground-state";
 import { AuthDialog } from "./auth";
+import styles from "@/app/page.module.css";
 
 export function ConnectButton() {
   const { connect, disconnect, shouldConnect } = useConnection();
@@ -50,29 +50,26 @@ export function ConnectButton() {
   }, [initiateConnectionFlag, initiateConnection, pgState.openaiAPIKey]);
 
   return (
-    <>
-      <Button
+    <div className={`flex flex-col items-center ${styles.floatingDisconnect}`}>
+      <button
         onClick={handleConnectionToggle}
         disabled={connecting || shouldConnect}
-        className="text-sm font-semibold bg-oai-green"
+        className="w-20 h-20 rounded-full bg-blue-500 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200 ease-in-out mb-4"
       >
         {connecting || shouldConnect ? (
-          <>
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Connecting
-          </>
+          <Loader2 className="h-8 w-8 text-white animate-spin" />
         ) : (
-          <>
-            <Mic className="mr-2 h-4 w-4" />
-            Connect
-          </>
+          <Mic className="h-8 w-8 text-white" />
         )}
-      </Button>
+      </button>
+      <p className="text-blue-500 text-lg font-medium text-center">
+        Click the microphone to start
+      </p>
       <AuthDialog
         open={showAuthDialog}
         onOpenChange={setShowAuthDialog}
         onAuthComplete={handleAuthComplete}
       />
-    </>
+    </div>
   );
 }

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChatHistory">
+    <accountData>
+      <list>
+        <AccountData>
+          <accountId value="VXNlcjoyNDA2MzE=" />
+          <chats>
+            <list>
+              <chat>
+                <internalId value="20fc9ce4-8275-4c7a-894d-ac1dfc62a678" />
+              </chat>
+              <chat>
+                <internalId value="d77514eb-72ce-4724-8308-7d24f45a6f85" />
+              </chat>
+              <chat>
+                <internalId value="7815ff95-2b86-4a64-8cbd-451c4835da23" />
+                <llm>
+                  <llm>
+                    <model value="ollama/orca-mini:latest" />
+                    <provider value="Ollama" />
+                    <title value="orca mini:latest" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+              </chat>
+              <chat>
+                <internalId value="aaf5de72-0601-453b-a88b-014ba8ffb388" />
+                <llm>
+                  <llm>
+                    <model value="ollama/orca-mini:latest" />
+                    <provider value="Ollama" />
+                    <title value="orca mini:latest" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+              </chat>
+              <chat>
+                <internalId value="50951b6e-0644-4e5d-99e9-45e1d6a42830" />
+              </chat>
+              <chat>
+                <internalId value="b697ebba-674e-4a28-a7ee-6f3a22dc466f" />
+              </chat>
+              <chat>
+                <internalId value="f7a25377-480c-455f-a953-6591f229f38a" />
+              </chat>
+              <chat>
+                <internalId value="0892f864-828c-4164-a399-4ca350ec1783" />
+              </chat>
+              <chat>
+                <internalId value="fff2f44c-79dd-4d9c-b1fb-dcaa91f0b1eb" />
+              </chat>
+              <chat>
+                <internalId value="9a53ebc0-c0b9-4675-96c8-723383d0c9f9" />
+              </chat>
+              <chat>
+                <internalId value="6489515a-d2fc-4a5c-aff5-239cb52f0d21" />
+              </chat>
+              <chat>
+                <internalId value="f0586c11-dd95-4ab3-a384-cbebd43b792a" />
+              </chat>
+              <chat>
+                <internalId value="25525f29-43d2-4cba-9a2a-989a52225317" />
+              </chat>
+              <chat>
+                <internalId value="5a425916-9591-421a-bc6e-a2c63d7a4455" />
+              </chat>
+            </list>
+          </chats>
+          <defaultLlm>
+            <llm>
+              <model value="ollama/orca-mini:latest" />
+              <provider value="Ollama" />
+              <tags>
+                <list>
+                  <option value="local" />
+                  <option value="ollama" />
+                  <option value="experimental" />
+                </list>
+              </tags>
+              <title value="orca mini:latest" />
+              <usage>
+                <list>
+                  <option value="chat" />
+                  <option value="edit" />
+                </list>
+              </usage>
+            </llm>
+          </defaultLlm>
+        </AccountData>
+      </list>
+    </accountData>
+  </component>
+</project>

@@ -8,9 +8,11 @@ import { MaxOutputTokensSelector } from "./max-output-tokens-selector";
 import { ConfigurationFormFieldProps } from "./configuration-form";
 import { ModelSelector } from "./model-selector";
 import { TranscriptionSelector } from "./transcription-selector";
+import styles from '../app/page.module.css';
+
 export function SessionConfig({ form }: ConfigurationFormFieldProps) {
   return (
-    <div className="space-y-2">
+    <div className={`space-y-2 ${styles.hidden}`}>
       <ModelSelector form={form} />
       <TranscriptionSelector form={form} />
       <VoiceSelector form={form} />

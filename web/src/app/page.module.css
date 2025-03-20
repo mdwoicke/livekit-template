@@ -1,0 +1,39 @@
+.hidden {
+  display: none !important;
+}
+
+.floatingDisconnect {
+  position: fixed;
+  left: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+/* Hide the entire Configuration section in the left nav */
+.pageWrapper :global([class*="configuration"]),
+.pageWrapper :global([class*="Configuration"]),
+.pageWrapper :global([id*="configuration"]),
+.pageWrapper :global([id*="Configuration"]),
+.pageWrapper :global([data-testid*="configuration"]),
+.pageWrapper :global([data-testid*="Configuration"]) {
+  display: none !important;
+}
+
+/* Hide any potential parent containers */
+.pageWrapper :global(.sidebar),
+.pageWrapper :global(.left-nav),
+.pageWrapper :global(.left-panel),
+.pageWrapper :global([class*="sidebar"]),
+.pageWrapper :global([class*="left-nav"]),
+.pageWrapper :global([class*="left-panel"]) {
+  display: none !important;
+}
+
+/* Ensure the main content takes full width */
+.pageWrapper :global(main),
+.pageWrapper :global([class*="main-content"]) {
+  width: 100% !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}

@@ -16,6 +16,7 @@ import { useAgent } from "@/hooks/use-agent";
 import { useConnection } from "@/hooks/use-connection";
 import { toast } from "@/hooks/use-toast";
 
+
 export function Chat() {
   const connectionState = useConnectionState();
   const { audioTrack, state } = useVoiceAssistant();
@@ -103,6 +104,7 @@ export function Chat() {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 10 }}
         transition={{ type: "tween", duration: 0.15, ease: "easeInOut" }}
+        className="flex justify-center items-center w-full"
       >
         {isChatRunning ? <SessionControls /> : <ConnectButton />}
       </motion.div>
@@ -110,13 +112,13 @@ export function Chat() {
   );
 
   return (
-    <div className="flex flex-col h-full overflow-hidden p-2 lg:p-4">
+    <div className="overflow-hidden">
       <ChatControls
         showEditButton={isChatRunning}
         isEditingInstructions={isEditingInstructions}
         onToggleEdit={toggleInstructionsEdit}
       />
-      <div className="flex flex-col flex-grow items-center lg:justify-between mt-12 lg:mt-0">
+      <div className="flex flex-col flex-grow items-center justify-between mt-12 lg:mt-0">
         <div className="w-full h-full flex flex-col">
           <div className="flex items-center justify-center w-full">
             <div className="lg:hidden w-full">
@@ -126,18 +128,18 @@ export function Chat() {
                 <Instructions />
               )}
             </div>
-            <div className="hidden lg:block w-full">
+            {/* <div className="hidden lg:block w-full">
               <Instructions />
-            </div>
+            </div> */}
           </div>
           <div className="grow h-full flex items-center justify-center">
-            <div className="w-full hidden lg:block">
+            <div className="w-full hidden lg:w-full">
               {isChatRunning && !isEditingInstructions && renderVisualizer()}
             </div>
           </div>
         </div>
 
-        <div className="md:mt-2 md:pt-2 md:mb-12 max-md:fixed max-md:bottom-12 max-md:left-1/2 max-md:-translate-x-1/2 max-md:z-50 xl:fixed xl:bottom-12 xl:left-1/2 xl:-translate-x-1/2 xl:z-50">
+        <div className="grow h-full flex items-center justify-center">
           {renderConnectionControl()}
         </div>
       </div>
